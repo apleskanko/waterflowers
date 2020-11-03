@@ -56,7 +56,6 @@
                 etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
             <p>
                 <button class="btn btn-primary my-2" data-toggle="modal" data-target="#createModal">Add Flower</button>
-                <%--                <a href="#" class="btn btn-secondary my-2">Secondary action</a>--%>
             </p>
         </div>
     </section>
@@ -181,14 +180,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 <script>
-    window.onload = function () {
-        var params = new window.URLSearchParams(window.location.search);
-        var isUpdate = params.get('update');
-        if (isUpdate === "") {
-            $('#updateModal').modal('show');
-        }
-    };
-
     var onUpdate = function (id) {
         var updFlower;
         $.get("/flowers/" + id, function (data) {
